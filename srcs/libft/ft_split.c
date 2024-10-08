@@ -12,7 +12,6 @@
 
 #include "../../ashes.h"
 
-// retourne la taille du tableau en comptant le NULL
 static int	count_split(const char *s, char c)
 {
 	size_t	i;

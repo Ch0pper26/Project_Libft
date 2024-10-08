@@ -6,7 +6,7 @@
 #    By: eblondee <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/29 13:40:34 by eblondee          #+#    #+#              #
-#    Updated: 2022/07/08 16:49:59 by eblondee         ###   ########.fr        #
+#    Updated: 2023/10/30 17:17:39 by eblondee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,12 +60,28 @@ SRCS=	./srcs/libft/ft_isalpha.c \
 		./srcs/printf/ft_printf_utils_bis.c \
 		./srcs/error/print_error.c \
 		./srcs/error/ft_is.c \
+		./srcs/libft_lstdc/ft_create_lstdc.c \
+		./srcs/libft_lstdc/ft_free_lstdc.c \
+		./srcs/libft_lstdc/ft_add_lstdc.c \
+		./srcs/libft_lstdc/ft_index_lstdc.c \
+		./srcs/libft_lstdc/ft_move_in_lstdc.c \
+		./srcs/libft_lstdc/ft_print_lstdc.c \
+        ./srcs/libft_lstdc/ft_get_lstdc.c \
+        ./srcs/libft_lstdc/ft_move_elem_lstdc.c \
+        ./srcs/libft_lstdc/ft_merge_lstdc.c \
+        ./srcs/libft_lstdc/ft_int_lstdc.c \
+        ./srcs/libft_lstdc/ft_str_lstdc.c \
+        ./srcs/libft_lstdc/ft_char_lstdc.c \
+        ./srcs/libft_lstdc/ft_anything_to_void.c \
+        ./srcs/libft_lstdc/ft_void_to_anything.c \
 		./srcs/libft_bis/ft_atoll.c \
 		./srcs/libft_bis/ft_strcmp.c \
 		./srcs/libft_bis/ft_strcpy.c \
 		./srcs/libft_bis/ft_search_int_in_tab.c \
 		./srcs/libft_bis/ft_free.c \
 		./srcs/libft_bis/ft_len.c \
+		./srcs/libft_bis/ft_tabchar.c \
+		./srcs/libft_bis/ft_splitters.c \
 
 OBJS = ${SRCS:.c=.o}
 
@@ -77,15 +93,15 @@ RM	= rm -rf
 
 INC = libft.h 
 
-CFLAGS	= -Wall -Wextra -Werror -I.${INC}
+CFLAG = -Wall -Wextra -Werror -g -I.${INC}
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
+all:	${NAME}
+
 $(NAME):	${OBJS}
 	ar rcs ${NAME} ${OBJS}
-
-all:	${NAME}
 
 clean:
 	${RM} ${OBJS}

@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_len.c                                           :+:      :+:    :+:   */
+/*   ft_move_elem_lstdc.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eblondee <eblondee@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 11:02:42 by eblondee          #+#    #+#             */
-/*   Updated: 2022/05/30 11:17:24 by eblondee         ###   ########.fr       */
+/*   Created: 2022/07/25 14:48:19 by eblondee          #+#    #+#             */
+/*   Updated: 2022/07/25 17:06:10 by eblondee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../ashes.h"
 
-int	ft_len_tabchar(char **split)
+void	ft_swap_data(t_lstdc **lstdc, int index_1, int index_2)
 {
-	int	i;
+	void	*data_1;
+	void	*data_2;
+	t_lstdc	*l_1;
+	t_lstdc	*l_2;
 
-	i = 0;
-	while (split[i] != NULL)
-		i++;
-	return (i + 1);
-}
-
-int	ft_len_tabchar_no_null(char **split)
-{
-	int	i;
-
-	i = 0;
-	while (split[i] != NULL)
-		i++;
-	return (i);
+	l_1 = *lstdc;
+	l_2 = *lstdc;
+	ft_go_to(&l_1, index_1);
+	ft_go_to(&l_2, index_2);
+	data_1 = l_1->data;
+	data_2 = l_2->data;
+	l_2->data = data_1;
+	l_1->data = data_2;
 }

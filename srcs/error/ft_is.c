@@ -12,6 +12,24 @@
 
 #include "../../ashes.h"
 
+int	ft_is_unsigned_int(char *num)
+{
+	int			i;
+	long long	nb;
+
+	i = 0;
+	while (num[i])
+	{
+		if ((ft_isdigit(num[i]) == 0))
+			return (ft_print_error("Arguments isn't a unsigned int"));
+		i++;
+	}
+	nb = ft_atoll(num);
+	if (nb < 0 || nb > 2147483647)
+		return (ft_print_error("Arguments isn't between 0 and MAX_INT"));
+	return (0);
+}
+
 int	ft_is_int(char *num)
 {
 	int			i;
@@ -21,11 +39,11 @@ int	ft_is_int(char *num)
 	while (num[i])
 	{
 		if ((ft_isdigit(num[i]) == 0))
-			return (ft_print_error("Arguments weren't a unsigned int"));
+			return (ft_print_error("Arguments isn't a unsigned int"));
 		i++;
 	}
 	nb = ft_atoll(num);
-	if (nb < 1 || nb > 2147483647)
-		return (ft_print_error("Arguments weren't between 1 and MAX_INT"));
+	if (nb < 0 || nb > 2147483647)
+		return (ft_print_error("Arguments isn't between 0 and MAX_INT"));
 	return (0);
 }

@@ -6,11 +6,9 @@
 /*   By: eblondee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:14:45 by eblondee          #+#    #+#             */
-/*   Updated: 2022/05/11 14:20:41 by eblondee         ###   ########.fr       */
+/*   Updated: 2023/10/27 16:03:10 by eblondee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "../../ashes.h"
 
 void	ft_strcpy(char *dst, const char *src)
 {

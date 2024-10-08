@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_len.c                                           :+:      :+:    :+:   */
+/*   ft_void_to_anything.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eblondee <eblondee@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 11:02:42 by eblondee          #+#    #+#             */
-/*   Updated: 2022/05/30 11:17:24 by eblondee         ###   ########.fr       */
+/*   Created: 2022/07/19 17:22:38 by eblondee          #+#    #+#             */
+/*   Updated: 2022/07/20 11:21:30 by eblondee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../ashes.h"
 
-int	ft_len_tabchar(char **split)
+int	*ft_vvtoi(void **tab)
 {
-	int	i;
+	int	*elem;
 
-	i = 0;
-	while (split[i] != NULL)
-		i++;
-	return (i + 1);
+	elem = malloc(sizeof(int *));
+	elem = (*(int **)tab);
+	return (elem);
 }
 
-int	ft_len_tabchar_no_null(char **split)
+char	*ft_vvtoc(void **tab)
 {
-	int	i;
+	char	*elem;
 
-	i = 0;
-	while (split[i] != NULL)
-		i++;
-	return (i);
+	elem = malloc(sizeof(char *));
+	elem = (*(char **)tab);
+	return (elem);
+}
+
+char	**ft_vvtos(void **tab)
+{
+	char	**elem;
+
+	elem = malloc(sizeof(char **));
+	elem = (*(char ***)tab);
+	return (elem);
 }

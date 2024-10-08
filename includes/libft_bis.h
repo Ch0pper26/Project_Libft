@@ -26,9 +26,17 @@ int			ft_find_med(int *tab, int len);
 int			ft_next_int(int *tab, int len, int current_int);
 int			ft_prev_int(int *tab, int len, int current_int);
 /* ft_free */
-void		ft_free_split(char **split);
+void		ft_free_tabchar(char **split);
 /* ft_len */
-int			ft_len_split_with_null(char **split);
-int			ft_len_split_no_null(char **split);
+int			ft_len_tabchar(char **split);
+int			ft_len_tabchar_no_null(char **split);
+/* ft_tabchar */
+char	**ft_merge_tabchar(char **tab1, char **tab2, char option);
+char	**ft_realloc_str(char **tab, char *elem, int index);
+char	**ft_supp_elem_tabchar(char **tab, int index);
+char	**ft_copy_tabchar(char **tab);
+/*ft_splitters.c */
+char	**ft_splitters(char *str, char *splitters);
+int	ft_is_in(char c, char *str);
 
 #endif

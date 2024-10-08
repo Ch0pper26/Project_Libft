@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_len.c                                           :+:      :+:    :+:   */
+/*   ft_anything_to_void.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eblondee <eblondee@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 11:02:42 by eblondee          #+#    #+#             */
-/*   Updated: 2022/05/30 11:17:24 by eblondee         ###   ########.fr       */
+/*   Created: 2022/07/19 16:55:34 by eblondee          #+#    #+#             */
+/*   Updated: 2022/07/20 14:01:51 by eblondee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../ashes.h"
 
-int	ft_len_tabchar(char **split)
+void	**ft_itovv(int *nb)
 {
-	int	i;
+	void	**elem;
 
-	i = 0;
-	while (split[i] != NULL)
-		i++;
-	return (i + 1);
+	elem = malloc(sizeof(void *));
+	*elem = nb;
+	return (elem);
 }
 
-int	ft_len_tabchar_no_null(char **split)
+void	**ft_ctovv(char *c)
 {
-	int	i;
+	void	**elem;
 
-	i = 0;
-	while (split[i] != NULL)
-		i++;
-	return (i);
+	elem = malloc(sizeof(void *));
+	*elem = c;
+	return (elem);
+}
+
+void	**ft_stovv(char **tab)
+{
+	void	**elem;
+
+	elem = malloc(sizeof(void *));
+	*elem = tab;
+	return (elem);
 }

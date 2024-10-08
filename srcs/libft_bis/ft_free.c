@@ -12,7 +12,7 @@
 
 #include "../../ashes.h"
 
-void	ft_free_split(char **split)
+void	ft_free_tabchar(char **split)
 {
 	int	i;
 
